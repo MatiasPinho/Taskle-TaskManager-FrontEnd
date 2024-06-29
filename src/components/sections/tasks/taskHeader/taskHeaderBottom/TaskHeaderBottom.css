@@ -1,0 +1,32 @@
+.tasks__header-bottom {
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+}
+
+.task__filter {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 1.4rem;
+  border: 0.00001px solid #64646452;
+  box-shadow: rgb(18 18 18) 0px 8px 28px 0px;
+  border-radius: var(--border-radius--default);
+}
+
+@media (max-width: 1200px) {
+  .tasks__header-bottom {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 32px;
+  }
+}
+
+@media (max-width: 720px) {
+  .task__filter {
+    font-size: 1rem;
+  }
+}

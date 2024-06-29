@@ -1,0 +1,21 @@
+.taskList {
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+  /* display: flex; */
+  display: grid;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  max-height: 85%;
+}
+
+@media (max-width: 1200px) {
+  .taskList {
+    grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .taskList {
+    justify-content: center;
+  }
+}

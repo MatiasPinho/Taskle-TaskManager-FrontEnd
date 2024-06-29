@@ -1,0 +1,45 @@
+.tasks__header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasks__title {
+  font-size: 31px;
+  font-weight: 500;
+}
+
+.tasks__controls {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.tasks__filters {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tasks__new-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: none;
+  outline: none;
+  padding: 14px 19px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--blue-100);
+  background-image: var(--yellow-gradient);
+  border-radius: var(--border-radius--special);
+}
+
+@media (max-width: 480px) {
+  .tasks__controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

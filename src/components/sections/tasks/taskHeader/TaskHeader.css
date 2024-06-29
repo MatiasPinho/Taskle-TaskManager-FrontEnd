@@ -1,0 +1,14 @@
+.tasks__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 720px) {
+  .tasks__header {
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+}
