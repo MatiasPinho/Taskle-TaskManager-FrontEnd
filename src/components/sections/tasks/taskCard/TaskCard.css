@@ -4,7 +4,7 @@
   flex-grow: 1;
   /* min-width: 345px; */
   padding: 26px 30px;
-  background-image: var(--black-gradient);
+  background-color: var(--black-100);
   border: 0.00001px solid #64646452;
   box-shadow: rgb(18 18 18) 0px 8px 28px 0px;
   border-radius: var(--border-radius--default);
