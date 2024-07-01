@@ -103,6 +103,7 @@
   .sidebar__bottom {
     left: -105%;
     padding-bottom: 23px;
+    padding-top: 120px;
     max-height: none;
     background-color: var(--black-100);
   }

@@ -14,7 +14,7 @@
   background-color: transparent;
   outline: none;
   border: none;
-  border: 1px solid var(--grey-100);
+  border: 0.00001px solid #64646452;
   border-radius: var(--border-radius--special);
   font-size: 1rem;
 }
