@@ -10,9 +10,9 @@
   z-index: 30;
 }
 
-.header--opacity {
+/* .header--opacity {
   opacity: 16%;
-}
+} */
 
 .header__nav {
   display: flex;
