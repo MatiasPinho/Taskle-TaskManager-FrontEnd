@@ -28,6 +28,7 @@ body {
   --purple-100: #bb80ff;
   --border-radius--default: 8px;
   --border-radius--special: 50px;
+  color-scheme: dark;
 }
 
 /*resets */

@@ -1,5 +1,6 @@
-import Icon from '../../../../assets/icons/icon';
-import "./SidebarNavigation.css"
+import { Link } from "react-router-dom";
+import Icon from "../../../../assets/icons/icon";
+import "./SidebarNavigation.css";
 export const SidebarNavigation = () => {
   return (
     <ul className="sidebar__navigation">
@@ -16,10 +17,10 @@ export const SidebarNavigation = () => {
         </a>
       </li>
       <li className="sidebar__navigation-item ">
-        <a href="" className="sidebar__navigation-link active-link">
+        <Link to="/tasks" className="sidebar__navigation-link active-link">
           <Icon name="task" width={25} height={25} />
           Tasks
-        </a>
+        </Link>
       </li>
       <li className="sidebar__navigation-item">
         <a href="" className="sidebar__navigation-link">

@@ -10,7 +10,6 @@
   align-items: center;
   gap: 16px;
   padding-left: 2rem;
-  z-index: 20;
 }
 
 .active-link {
@@ -21,5 +20,4 @@
   height: 40px;
   background-image: var(--yellow-gradient);
   border-radius: var(--border-radius--special);
-  z-index: -1;
 }

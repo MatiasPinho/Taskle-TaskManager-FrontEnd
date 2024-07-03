@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .task__filter {
     font-size: 1rem;
   }

@@ -17,6 +17,7 @@ import {
   Comentary,
   Edit,
   Trash,
+  Close,
 } from "./icons";
 
 const iconComponents = {
@@ -38,6 +39,7 @@ const iconComponents = {
   comentary: Comentary,
   edit: Edit,
   trash: Trash,
+  close: Close,
 };
 type IconName = keyof typeof iconComponents;
 interface iconProps extends React.SVGProps<SVGSVGElement> {

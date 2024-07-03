@@ -10,6 +10,7 @@ export const TaskList = () => {
         date="Jul 15"
         comentary="15"
       />
+
       <TaskCard
         title="SEO Audit"
         paragraph="Conducting a comprehensive SEO audit to identify opportunities for optimization."

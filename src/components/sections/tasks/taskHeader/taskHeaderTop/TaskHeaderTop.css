@@ -33,8 +33,19 @@
   font-weight: 500;
   cursor: pointer;
   color: var(--blue-100);
+  transition: 0.5s ease-in-out;
   background-image: var(--yellow-gradient);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: var(--border-radius--special);
+}
+
+.tasks__new-task:hover {
+  box-shadow: 0px 0px 11px 2px #ffeb3b;
+}
+
+.material-button:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Sombra reducida al hacer clic */
+  transform: translateY(1px); /* Efecto de elevación al hacer clic */
 }
 
 @media (max-width: 480px) {

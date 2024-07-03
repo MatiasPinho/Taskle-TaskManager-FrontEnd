@@ -1,0 +1,167 @@
+.new-task {
+  padding: 46px 2rem;
+  display: flex;
+  column-gap: 70px;
+}
+
+.new-task__create {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  padding: 46px 2.1rem;
+  min-width: 600px;
+  background-color: var(--black-100);
+  border: 0.00001px solid #64646452;
+  border-radius: var(--border-radius--default);
+}
+
+.new-task__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.new-task__label-input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.new-task__title-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-task__title {
+  font-size: 21px;
+}
+
+.new-task__instructions {
+  color: var(--white-70);
+  max-width: 50ch;
+  line-height: 1.3;
+  font-size: 0.875rem;
+}
+
+.new-task__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  color: var(--white-70);
+}
+
+.new-task__label {
+  font-weight: bold;
+}
+
+.new-task__input-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 9px;
+}
+
+.new-task__input {
+  padding: 18px 12px;
+  background-color: transparent;
+  outline: none;
+  border: 0.00001px solid #64646452;
+  color: var(--white-100);
+  border-radius: var(--border-radius--default);
+}
+
+.new-task__char-count {
+  align-self: flex-end;
+  font-size: 0.75rem;
+}
+
+.new-task__select {
+  padding: 18px 12px;
+  background-color: transparent;
+  outline: none;
+  border: 0.00001px solid #64646452;
+  color: var(--white-100);
+  border-radius: var(--border-radius--default);
+  appearance: none; /* Eliminar el estilo predeterminado */
+  -webkit-appearance: none; /* Eliminar el estilo predeterminado en Safari/Chrome */
+  -moz-appearance: none; /* Eliminar el estilo predeterminado en Firefox */
+}
+
+.new-task__select:focus {
+  background-color: transparent;
+}
+
+.new-task__select option {
+  background-color: var(--black-100); /* Color de fondo de las opciones */
+  color: var(--white-100); /* Color del texto de las opciones */
+}
+
+.new-task__date-group {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 18px;
+  margin-top: 9px;
+}
+
+.new-task__date-field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  flex: 1;
+}
+
+.new-task__buttons {
+  display: flex;
+  align-self: flex-end;
+  column-gap: 20px;
+  margin-top: 9px;
+}
+
+.new-task__button--create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: none;
+  outline: none;
+  padding: 14px 19px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--blue-100);
+  transition: 0.5s ease-in-out;
+  background-image: var(--yellow-gradient);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: var(--border-radius--default);
+}
+
+.new-task__button--cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: none;
+  outline: none;
+  padding: 14px 19px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--white-100);
+  transition: 0.5s ease-in-out;
+  background-color: transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: var(--border-radius--default);
+  border: 0.00001px solid #64646452;
+}
+
+.new-task__share {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 46px 2rem;
+  min-width: 600px;
+  max-height: 600px;
+  background-color: var(--black-100);
+  border: 0.00001px solid #64646452;
+  border-radius: var(--border-radius--default);
+}

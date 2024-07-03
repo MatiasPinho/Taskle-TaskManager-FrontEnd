@@ -25,7 +25,6 @@ export const Sidebar: React.FC<IconProps> = ({
       bodyElement.classList.remove("body--overflow");
     }
 
-    // Cleanup function to remove class when the component is unmounted or isMenuClicked changes
     return () => {
       bodyElement.classList.remove("body--overflow");
     };

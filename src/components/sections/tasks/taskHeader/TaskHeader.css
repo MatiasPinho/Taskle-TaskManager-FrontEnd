@@ -5,7 +5,7 @@
   flex-direction: row-reverse;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .tasks__header {
     flex-wrap: wrap;
     flex-direction: column;
