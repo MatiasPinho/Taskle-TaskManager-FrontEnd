@@ -1,8 +1,53 @@
 import { Link } from "react-router-dom";
 import Icon from "../../../../assets/icons/icon";
 import "./NewTask.css";
+import { useState } from "react";
 
 export const NewTask = () => {
+  const [formData, setFormData] = useState({
+    title: {
+      value: "",
+      maxCharacters: 20,
+    },
+    description: {
+      value: "",
+      maxCharacters: 80,
+    },
+    category: {
+      value: "",
+      maxCharacters: 20,
+    },
+    priority: {
+      value: "",
+    },
+    dateStart: {
+      value: "",
+    },
+    dateEnd: {
+      value: "",
+    },
+  });
+
+  const [initialStateForm, setInitialStateForm] = useState(formData);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: {
+        ...prevFormData[name],
+        value,
+      },
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    console.log(formData);
+    setFormData(initialStateForm);
+  };
+
   return (
     <section className="new-task">
       <article className="new-task__create">
@@ -20,7 +65,7 @@ export const NewTask = () => {
           </p>
         </header>
 
-        <form className="new-task__form" action="">
+        <form className="new-task__form" onSubmit={handleSubmit}>
           <div className="new-task__label-input">
             <label className="new-task__label" htmlFor="taskTitle">
               Title
@@ -31,8 +76,19 @@ export const NewTask = () => {
                 type="text"
                 id="taskTitle"
                 placeholder="Enter title"
+                name="title"
+                value={formData.title.value}
+                onChange={handleInputChange}
               />
-              <p className="new-task__char-count">00/20</p>
+              <p
+                className={`new-task__char-count ${
+                  formData.title.value.length > formData.title.maxCharacters
+                    ? "new-task__char-count--exceeded"
+                    : ""
+                }`}
+              >
+                {formData.title.value.length}/{formData.title.maxCharacters}
+              </p>
             </div>
           </div>
           <div className="new-task__label-input">
@@ -45,8 +101,21 @@ export const NewTask = () => {
                 type="text"
                 id="taskDescription"
                 placeholder="Enter description"
+                name="description"
+                value={formData.description.value}
+                onChange={handleInputChange}
               />
-              <p className="new-task__char-count">00/80</p>
+              <p
+                className={`new-task__char-count ${
+                  formData.description.value.length >
+                  formData.description.maxCharacters
+                    ? "new-task__char-count--exceeded"
+                    : ""
+                }`}
+              >
+                {formData.description.value.length}/
+                {formData.description.maxCharacters}
+              </p>
             </div>
           </div>
           <div className="new-task__label-input">
@@ -59,8 +128,21 @@ export const NewTask = () => {
                 type="text"
                 id="taskCategory"
                 placeholder="Enter category"
+                value={formData.category.value}
+                name="category"
+                onChange={handleInputChange}
               />
-              <p className="new-task__char-count">00/20</p>
+              <p
+                className={`new-task__char-count ${
+                  formData.category.value.length >
+                  formData.category.maxCharacters
+                    ? "new-task__char-count--exceeded"
+                    : ""
+                }`}
+              >
+                {formData.category.value.length}/
+                {formData.category.maxCharacters}
+              </p>
             </div>
           </div>
           <div className="new-task__label-input new-task__label-input-alternative">
@@ -70,7 +152,9 @@ export const NewTask = () => {
             <select
               className="new-task__select"
               id="taskPriority"
-              name="taskPriority"
+              name="priority"
+              value={formData.priority.value}
+              onChange={handleInputChange}
             >
               <option className="new-task__option" value="low">
                 Low
@@ -89,20 +173,37 @@ export const NewTask = () => {
               <label className="new-task__label" htmlFor="startDate">
                 Start date
               </label>
-              <input className="new-task__input" type="date" id="startDate" />
+              <input
+                className="new-task__input"
+                type="date"
+                id="startDate"
+                name="dateStart"
+                value={formData.dateStart.value}
+                onChange={handleInputChange}
+              />
             </div>
             <div className="new-task__date-field">
               <label className="new-task__label" htmlFor="endDate">
                 End date
               </label>
-              <input className="new-task__input" type="date" id="endDate" />
+              <input
+                className="new-task__input"
+                type="date"
+                id="endDate"
+                value={formData.dateEnd.value}
+                name="dateEnd"
+                onChange={handleInputChange}
+              />
             </div>
           </div>
           <div className="new-task__buttons">
             <button className="new-task__button new-task__button--cancel">
               Cancel
             </button>
-            <button className="new-task__button new-task__button--create">
+            <button
+              type="submit"
+              className="new-task__button new-task__button--create"
+            >
               Create Task
             </button>
           </div>
@@ -116,8 +217,8 @@ export const NewTask = () => {
           </div>
 
           <p className="new-task__instructions">
-            Add your teammate to your team and start working togheter on getting
-            donel
+            Add your teammate to your team and start working together on getting
+            done!
           </p>
         </header>
         <form action=""></form>

@@ -9,7 +9,7 @@ export const PageTransition = () => {
       <CSSTransition
         key={location.key}
         classNames="page"
-        timeout={800}
+        timeout={1000}
         mountOnEnter
         unmountOnExit
       >

@@ -75,6 +75,11 @@
 .new-task__char-count {
   align-self: flex-end;
   font-size: 0.75rem;
+  transition: 0.5s ease-in-out;
+}
+
+.new-task__char-count--exceeded {
+  color: red;
 }
 
 .new-task__select {

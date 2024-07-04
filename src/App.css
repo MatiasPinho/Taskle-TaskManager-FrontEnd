@@ -1,6 +1,8 @@
 /*fonts */
-body {
-  font-family: "Inter Variable", sans-serif;
+
+body,
+input {
+  font-family: var(--font-family);
 }
 
 /*colors */
@@ -28,6 +30,7 @@ body {
   --purple-100: #bb80ff;
   --border-radius--default: 8px;
   --border-radius--special: 50px;
+  --font-family: "Inter Variable", sans-serif;
   color-scheme: dark;
 }
 
@@ -96,7 +99,8 @@ main {
 .page-enter-active {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity 800ms, transform 800ms;
+  transition: opacity 1000ms, transform 1000ms;
+  overflow: hidden;
 }
 .page-exit {
   opacity: 1;
@@ -105,7 +109,7 @@ main {
 .page-exit-active {
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity 800ms, transform 800ms;
+  transition: opacity 1000ms, transform 1000ms;
 }
 
 @media (max-width: 1200px) {

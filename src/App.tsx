@@ -21,7 +21,7 @@ function App() {
           element: <TaskPage />,
         },
         {
-          path: "tasks/newTask",
+          path: "/tasks/newTask",
           element: <NewTask />,
         },
       ],
