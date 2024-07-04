@@ -1,49 +1,50 @@
 import { Link } from "react-router-dom";
 import Icon from "../../../../assets/icons/icon";
 import "./NewTask.css";
-import { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
-export const NewTask = () => {
-  const [formData, setFormData] = useState({
-    title: {
-      value: "",
-      maxCharacters: 20,
-    },
-    description: {
-      value: "",
-      maxCharacters: 80,
-    },
-    category: {
-      value: "",
-      maxCharacters: 20,
-    },
-    priority: {
-      value: "",
-    },
-    dateStart: {
-      value: "",
-    },
-    dateEnd: {
-      value: "",
-    },
+// Define las interfaces para el estado del formulario
+interface FormField {
+  value: string;
+  maxCharacters?: number;
+}
+
+interface FormData {
+  title: FormField;
+  description: FormField;
+  category: FormField;
+  priority: FormField;
+  dateStart: FormField;
+  dateEnd: FormField;
+}
+
+export const NewTask: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    title: { value: "", maxCharacters: 20 },
+    description: { value: "", maxCharacters: 80 },
+    category: { value: "", maxCharacters: 20 },
+    priority: { value: "" },
+    dateStart: { value: "" },
+    dateEnd: { value: "" },
   });
 
-  const [initialStateForm, setInitialStateForm] = useState(formData);
+  const initialStateForm = useState(formData)[0];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: {
-        ...prevFormData[name],
+        ...prevFormData[name as keyof FormData],
         value,
       },
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target;
     console.log(formData);
     setFormData(initialStateForm);
   };
@@ -82,7 +83,7 @@ export const NewTask = () => {
               />
               <p
                 className={`new-task__char-count ${
-                  formData.title.value.length > formData.title.maxCharacters
+                  formData.title.value.length > formData.title.maxCharacters!
                     ? "new-task__char-count--exceeded"
                     : ""
                 }`}
@@ -108,7 +109,7 @@ export const NewTask = () => {
               <p
                 className={`new-task__char-count ${
                   formData.description.value.length >
-                  formData.description.maxCharacters
+                  formData.description.maxCharacters!
                     ? "new-task__char-count--exceeded"
                     : ""
                 }`}
@@ -135,7 +136,7 @@ export const NewTask = () => {
               <p
                 className={`new-task__char-count ${
                   formData.category.value.length >
-                  formData.category.maxCharacters
+                  formData.category.maxCharacters!
                     ? "new-task__char-count--exceeded"
                     : ""
                 }`}
