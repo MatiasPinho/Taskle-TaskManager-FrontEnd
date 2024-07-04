@@ -5,7 +5,6 @@ import { Root } from "./components/Root/Root";
 import { Home } from "./components/pages/Home/Home";
 import { TaskPage } from "./components/pages/TasksPage/TaskPage";
 import { NewTask } from "./components/sections/tasks/newTask/NewTask";
-
 function App() {
   const router = createBrowserRouter([
     {

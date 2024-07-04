@@ -13,7 +13,7 @@ export const HeaderControls = () => {
       </form>
       <div className="header__profile-notification">
         <img
-          src="./images/generic_pic.webp"
+          src="/images/generic_pic.webp"
           alt="Profile"
           className="header__profile-pic"
         />

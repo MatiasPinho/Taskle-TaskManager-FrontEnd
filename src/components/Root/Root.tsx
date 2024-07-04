@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
 import { Header } from "../layouts/header/Header";
 import { Sidebar } from "../layouts/sidebar/Sidebar";
 import { useState } from "react";
+import { PageTransition } from "./PageTransition"; // Importa el componente de transiciones
 
 export const Root = () => {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -23,7 +23,7 @@ export const Root = () => {
         }}
         className={isMenuClicked ? "main--opacity" : ""}
       >
-        <Outlet context={isMenuClicked} />
+        <PageTransition />
       </main>
     </>
   );

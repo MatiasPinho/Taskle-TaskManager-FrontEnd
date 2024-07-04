@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Icon from "../../../../assets/icons/icon";
 import "./NewTask.css";
 
@@ -8,7 +9,9 @@ export const NewTask = () => {
         <header className="new-task__header">
           <div className="new-task__title-close">
             <h2 className="new-task__title">Create new task</h2>
-            <Icon name="close" width={25} height={25} />
+            <Link to="/tasks">
+              <Icon name="close" width={25} height={25} />
+            </Link>
           </div>
 
           <p className="new-task__instructions">
