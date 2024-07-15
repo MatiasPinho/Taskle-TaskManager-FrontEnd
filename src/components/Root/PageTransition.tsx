@@ -1,18 +1,18 @@
-import { useState } from "react";
 import { useLocation, Outlet } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export const PageTransition = () => {
   const location = useLocation();
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  // const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleEnter = () => {
     document.body.style.overflowY = "hidden";
+    // setIsTransitioning(true);
   };
 
   const handleExited = () => {
     document.body.style.overflowY = "";
-    setIsTransitioning(false);
+    // setIsTransitioning(false);
   };
 
   return (

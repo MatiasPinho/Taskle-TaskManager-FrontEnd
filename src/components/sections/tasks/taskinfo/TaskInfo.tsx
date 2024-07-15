@@ -2,8 +2,6 @@ import { useParams } from "react-router-dom";
 import "./taskInfo.css";
 import useInfoTasks from "../../../../data/userInfoTasks.json";
 
-import { TaskCard } from "../taskCard/TaskCard";
-
 // Hay que comparar si userinfoTasks contiene el id que se pasa en el params(id de la card), si lo contiene, retornamos todos esos datos en una card nueva, de lo contrario, mandamos un error
 export const TaskInfo = () => {
   const { taskId } = useParams();

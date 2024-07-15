@@ -1,8 +1,7 @@
 import Icon from "../../../../assets/icons/icon";
-import { Comentary } from "../../../../assets/icons/icons";
 
 import "./TaskCard.css";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type PriorityType = string;
 type comentaryListType = {
@@ -39,7 +38,7 @@ const monthNames = [
 ];
 
 const formatDate = (date: string): string => {
-  const [year, month, day] = date.split("-");
+  const [, month, day] = date.split("-");
   const monthIndex = parseInt(month, 10) - 1;
 
   if (monthIndex >= 0 && monthIndex < 12) {
@@ -56,7 +55,7 @@ export const TaskCard = ({
   comentaryNumber,
   id,
   priority,
-  startTask,
+
   endTask,
   mode,
   comentaryList,
@@ -75,7 +74,7 @@ export const TaskCard = ({
     }
   };
 
-  const getStatusLabel = (priority: PriorityType): string => {
+  const getStatusLabel = (status: PriorityType): string => {
     switch (status) {
       case "Done":
         return "task-card__status--done";
@@ -146,7 +145,7 @@ export const TaskCard = ({
             <p className={`task-card__priority ${getPriorityLabel(priority)}`}>
               {priority}
             </p>
-            <p className={`task-card__priority ${getStatusLabel(priority)}`}>
+            <p className={`task-card__priority ${getStatusLabel(status)}`}>
               {status}
             </p>
           </div>
