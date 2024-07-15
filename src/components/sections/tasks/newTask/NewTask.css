@@ -2,6 +2,8 @@
   padding: 46px 2rem;
   display: flex;
   column-gap: 70px;
+  row-gap: 100px;
+  flex-wrap: wrap;
 }
 
 .new-task__create {
@@ -39,9 +41,10 @@
 
 .new-task__instructions {
   color: var(--white-70);
-  max-width: 50ch;
+  max-width: 45ch;
   line-height: 1.3;
   font-size: 1rem;
+  text-wrap: pretty;
 }
 
 .new-task__form {
@@ -107,6 +110,8 @@
   display: flex;
   justify-content: space-between;
   column-gap: 18px;
+  row-gap: 28px;
+  flex-wrap: wrap;
   margin-top: 9px;
 }
 
@@ -121,7 +126,9 @@
   display: flex;
   align-self: flex-end;
   column-gap: 20px;
+  row-gap: 20px;
   margin-top: 9px;
+  flex-wrap: wrap;
 }
 
 .new-task__button--create {
@@ -171,4 +178,16 @@
   background-color: var(--black-100);
   border: 0.00001px solid #64646452;
   border-radius: var(--border-radius--default);
+}
+
+@media (max-width: 1000px) {
+  .new-task__create {
+    flex-grow: 1;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .new-task__share {
+    min-width: auto;
+  }
 }

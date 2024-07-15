@@ -16,8 +16,12 @@
 .sidebar__workspace-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   font-size: 0.938rem;
+}
+
+.sidebar__workspace-item {
+  height: 40px;
 }
 
 .sidebar__workspace-navigation {
@@ -25,16 +29,18 @@
   align-items: center;
   gap: 16px;
   padding-left: 2rem;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  border-radius: var(--border-radius--default);
 }
 
 .active-workspace {
   color: var(--blue-100);
   font-weight: bold;
   width: 240px;
-  left: -30px;
-  height: 40px;
+  height: 100%;
   background-image: var(--yellow-gradient);
-  border-radius: var(--border-radius--default);
+
   z-index: -1;
 }
 

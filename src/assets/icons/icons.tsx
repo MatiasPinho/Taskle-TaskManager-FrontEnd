@@ -674,11 +674,12 @@ export const CalendarAlternative: React.FC<SvgProps> = (props) => {
       viewBox="0 0 17 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      stroke="white"
       {...props}
     >
       <path
         d="M6.01514 1.33337V3.33337"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -686,7 +687,7 @@ export const CalendarAlternative: React.FC<SvgProps> = (props) => {
       />
       <path
         d="M11.3486 1.33337V3.33337"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -694,7 +695,7 @@ export const CalendarAlternative: React.FC<SvgProps> = (props) => {
       />
       <path
         d="M3.01514 6.06006H14.3485"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -702,7 +703,7 @@ export const CalendarAlternative: React.FC<SvgProps> = (props) => {
       />
       <path
         d="M14.6819 5.66671V11.3334C14.6819 13.3334 13.6819 14.6667 11.3486 14.6667H6.01522C3.68188 14.6667 2.68188 13.3334 2.68188 11.3334V5.66671C2.68188 3.66671 3.68188 2.33337 6.01522 2.33337H11.3486C13.6819 2.33337 14.6819 3.66671 14.6819 5.66671Z"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -710,42 +711,42 @@ export const CalendarAlternative: React.FC<SvgProps> = (props) => {
       />
       <path
         d="M11.1451 9.13338H11.1511"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M11.1451 11.1334H11.1511"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M8.67879 9.13338H8.68478"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M8.67879 11.1334H8.68478"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M6.21151 9.13338H6.2175"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M6.21151 11.1334H6.2175"
-        stroke="#F1F3F5"
+        stroke=""
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

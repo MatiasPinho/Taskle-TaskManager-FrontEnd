@@ -1,13 +1,25 @@
 import Icon from "../../../../../assets/icons/icon";
 import { Link } from "react-router-dom";
 import "./TaskHeaderTop.css";
-export const TaskHeaderTop = () => {
+import React from "react";
+
+export const TaskHeaderTop = React.memo(({ mode, setMode }) => {
+  const handleViewModel = () => {
+    setMode({ mode: mode !== "list" ? "list" : "panel" });
+    console.log("soy la funcion que cambia el modo de verse");
+  };
+  console.log("soy el componente renderizado");
   return (
-    <div className="tasks__header-top">
+    <div className="tasks__header-top scale-in-center">
       <div className="tasks__controls">
         <div className="tasks__filters">
           <Icon name="users" width={25} height={25} />
-          <Icon name="filters" width={25} height={25} />
+          <Icon
+            onClick={handleViewModel}
+            name="filters"
+            width={25}
+            height={25}
+          />
         </div>
         <Link to="newTask" className="tasks__new-task button--active">
           New Task
@@ -16,4 +28,4 @@ export const TaskHeaderTop = () => {
       </div>
     </div>
   );
-};
+});

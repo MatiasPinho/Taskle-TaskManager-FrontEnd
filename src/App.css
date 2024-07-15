@@ -56,6 +56,21 @@ a {
 body {
   background-color: var(--black-100);
   color: var(--white-100);
+  overflow-x: hidden;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; /* Ensures the cursor does not interfere with any element interactions */
+  transition: transform 0.1s ease-out;
 }
 
 main {
@@ -94,22 +109,20 @@ main {
 
 .page-enter {
   opacity: 0;
-  transform: translateX(100%);
 }
+
 .page-enter-active {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity 1000ms, transform 1000ms;
-  overflow: hidden;
+  transition: opacity 600ms;
 }
+
 .page-exit {
   opacity: 1;
-  transform: translateX(0);
 }
+
 .page-exit-active {
   opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 1000ms, transform 1000ms;
+  transition: opacity 600ms;
 }
 
 @media (max-width: 1200px) {

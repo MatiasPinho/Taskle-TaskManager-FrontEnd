@@ -1,7 +1,11 @@
 .sidebar__navigation {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+}
+
+.sidebar__navigation-item {
+  height: 40px;
 }
 
 .sidebar__navigation-link {
@@ -9,7 +13,10 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  height: 100%;
   padding-left: 2rem;
+  transition: 0.5s ease-in-out;
+  border-radius: var(--border-radius--special);
 }
 
 .active-link {
@@ -17,7 +24,6 @@
   font-weight: bold;
   fill: var(--blue-100);
   width: 240px;
-  height: 40px;
+  height: 100%;
   background-image: var(--yellow-gradient);
-  border-radius: var(--border-radius--special);
 }
