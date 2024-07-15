@@ -1,9 +1,13 @@
 import Icon from "../../../../../assets/icons/icon";
 import { Link } from "react-router-dom";
 import "./TaskHeaderTop.css";
-import React from "react";
 
-export const TaskHeaderTop = React.memo(({ mode, setMode }) => {
+interface TaskHeaderTopProps {
+  mode: string | null | undefined;
+  setMode: (mode: { mode: string | null | undefined }) => void;
+}
+
+export const TaskHeaderTop = ({ mode, setMode }: TaskHeaderTopProps) => {
   const handleViewModel = () => {
     setMode({ mode: mode !== "list" ? "list" : "panel" });
     console.log("soy la funcion que cambia el modo de verse");
@@ -28,4 +32,4 @@ export const TaskHeaderTop = React.memo(({ mode, setMode }) => {
       </div>
     </div>
   );
-});
+};

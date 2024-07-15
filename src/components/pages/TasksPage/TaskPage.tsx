@@ -5,11 +5,11 @@ import "./TasksPage.css";
 
 export const TaskPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const mode: string | null = searchParams.get("mode");
+  const mode = searchParams.get("mode");
 
   return (
     <section className={`tasks`}>
-      <TaskHeader mode={mode} setMode={setSearchParams} />
+      <TaskHeader mode={mode} setMode={setSearchParams as any} />
       <TaskList mode={mode} />
     </section>
   );

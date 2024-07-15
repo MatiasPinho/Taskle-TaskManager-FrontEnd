@@ -3,11 +3,12 @@ import { TaskCard } from "../taskCard/TaskCard";
 import userInfoTasks from "../../../../data/userInfoTasks.json";
 import "./TaskList.css";
 
-interface TaskListProps {
+interface TaskModeProps {
   mode: string | null;
+  setMode?: (mode: string | null) => void;
 }
 
-export const TaskList = ({ mode }: TaskListProps) => {
+export const TaskList = ({ mode }: TaskModeProps) => {
   useEffect(() => {
     const taskCards = document.querySelectorAll<HTMLElement>(".task-card");
 

@@ -14,34 +14,7 @@ export const TaskInfo = () => {
 
   return (
     <section className="task__info">
-      {results.length > 0 ? (
-        results.map(
-          ({
-            title,
-            paragraph,
-            endTask,
-            category,
-            comentaryNumber,
-            id,
-            priority,
-          }) => {
-            return (
-              <TaskCard
-                key={id}
-                title={title}
-                paragraph={paragraph}
-                category={category}
-                comentaryNumber={comentaryNumber}
-                id={id}
-                priority={priority}
-                endTask={endTask}
-              />
-            );
-          }
-        )
-      ) : (
-        <h1>Error not cards</h1>
-      )}
+      {results.length > 0 ? <h1>Error not cards</h1> : "nada"}
     </section>
   );
 };
