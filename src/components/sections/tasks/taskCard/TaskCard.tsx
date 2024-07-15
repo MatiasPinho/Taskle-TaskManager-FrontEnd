@@ -4,8 +4,11 @@ import { Comentary } from "../../../../assets/icons/icons";
 import "./TaskCard.css";
 import { Link, useSearchParams } from "react-router-dom";
 
-type PriorityType = "High" | "Medium" | "Low";
-
+type PriorityType = string;
+type comentaryListType = {
+  name: string;
+  comentarys: string[];
+};
 interface TaskCardProps {
   title: string;
   paragraph: string;
@@ -15,6 +18,9 @@ interface TaskCardProps {
   priority: PriorityType;
   startTask?: string;
   endTask: string;
+  mode: string | null;
+  status: string;
+  comentaryList: comentaryListType[];
 }
 
 const monthNames = [

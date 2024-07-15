@@ -5,7 +5,7 @@ import "./TasksPage.css";
 
 export const TaskPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const mode = searchParams.get("mode");
+  const mode: string | null = searchParams.get("mode");
 
   return (
     <section className={`tasks`}>
