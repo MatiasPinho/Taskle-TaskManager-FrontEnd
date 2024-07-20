@@ -8,10 +8,11 @@
   display: flex;
   align-items: center;
   column-gap: 100px;
+  color: #171717;
 }
 
 .header__greeting {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 

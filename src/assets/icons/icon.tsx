@@ -18,6 +18,11 @@ import {
   Edit,
   Trash,
   Close,
+  Panel,
+  List,
+  Order,
+  Sense,
+  Priority,
 } from "./icons";
 
 const iconComponents = {
@@ -40,6 +45,11 @@ const iconComponents = {
   edit: Edit,
   trash: Trash,
   close: Close,
+  panel: Panel,
+  list: List,
+  order: Order,
+  sense: Sense,
+  priority: Priority,
 };
 type IconName = keyof typeof iconComponents;
 interface iconProps extends React.SVGProps<SVGSVGElement> {

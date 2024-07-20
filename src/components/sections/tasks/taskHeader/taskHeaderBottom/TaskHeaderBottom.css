@@ -8,13 +8,14 @@
   display: flex;
   align-items: center;
   column-gap: 16px;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
-  padding: 0.5rem 1.4rem;
+  padding: 0.3rem 1.4rem;
   border: 0.00001px solid #64646452;
-  box-shadow: rgb(18 18 18) 0px 8px 28px 0px;
+  /* box-shadow: rgb(18 18 18) 0px 8px 28px 0px; */
   border-radius: var(--border-radius--default);
+  color: #171717;
 }
 
 @media (max-width: 1200px) {

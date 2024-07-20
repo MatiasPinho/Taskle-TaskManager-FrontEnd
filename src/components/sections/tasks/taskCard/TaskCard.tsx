@@ -55,7 +55,6 @@ export const TaskCard = ({
   comentaryNumber,
   id,
   priority,
-
   endTask,
   mode,
   comentaryList,
@@ -117,26 +116,27 @@ export const TaskCard = ({
           </span>
 
           {mode === "list"
-            ? comentaryList.slice(0, 2).map(({ name, comentarys }) => {
+            ? comentaryList.slice(0, 2).map(({ name, comentarys }, index) => {
                 return (
-                  <>
-                    <aside className="task-card__comentary--list">
-                      <span className="task-card__comentary-img-paragraph">
-                        <img
-                          className="task-card__comentary-image"
-                          src="./images/generic_pic.webp"
-                          alt=""
-                        />
-                        <p className="task-card__comentary-name">{name}:</p>
-                      </span>
+                  <aside
+                    key={name + index}
+                    className="task-card__comentary--list"
+                  >
+                    <span className="task-card__comentary-img-paragraph">
+                      <img
+                        className="task-card__comentary-image"
+                        src="./images/generic_pic.webp"
+                        alt=""
+                      />
+                      <p className="task-card__comentary-name">{name}:</p>
+                    </span>
 
-                      <div className="task-card__comentary-paragraphs">
-                        {comentarys.slice(0, 1).map((comentary) => {
-                          return <p>{comentary}</p>;
-                        })}
-                      </div>
-                    </aside>
-                  </>
+                    <div className="task-card__comentary-paragraphs">
+                      {comentarys.slice(0, 1).map((comentary, index) => {
+                        return <p key={comentary + index}>{comentary}</p>;
+                      })}
+                    </div>
+                  </aside>
                 );
               })
             : ""}

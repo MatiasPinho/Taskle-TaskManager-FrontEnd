@@ -1,0 +1,41 @@
+.filter__menu-filter-container {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 25px;
+}
+
+.filter__menu-filter-options {
+  display: flex;
+  flex-direction: column;
+  /* row-gap: 13px; */
+}
+
+.filter__menu-filter-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.813rem;
+  color: hsla(0, 0%, 40%, 1);
+}
+
+.filter__menu-filter-option {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter__menu-date-option {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.filter__menu-label-option {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.filter .tasks__filters svg {
+  cursor: pointer;
+}

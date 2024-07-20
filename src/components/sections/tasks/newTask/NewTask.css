@@ -11,9 +11,8 @@
   flex-direction: column;
   row-gap: 50px;
   padding: 46px 2.1rem;
-  min-width: 600px;
-  background-color: var(--black-100);
-  border: 0.00001px solid #64646452;
+  min-width: 300px;
+  border: 1px solid rgb(0 0 0 / 8%);
   border-radius: var(--border-radius--default);
 }
 
@@ -35,15 +34,21 @@
   align-items: center;
 }
 
+.new-task__title-close svg {
+  stroke: #171717;
+}
+
 .new-task__title {
-  font-size: 21px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #171717;
 }
 
 .new-task__instructions {
-  color: var(--white-70);
+  color: hsla(0, 0%, 40%, 1);
   max-width: 45ch;
   line-height: 1.3;
-  font-size: 1rem;
+  font-size: 14px;
   text-wrap: pretty;
 }
 
@@ -56,7 +61,8 @@
 
 .new-task__label {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 14px;
+  color: #171717;
 }
 
 .new-task__input-group {
@@ -66,19 +72,20 @@
 }
 
 .new-task__input {
-  padding: 18px 12px;
+  padding: 13px 12px;
   background-color: transparent;
   outline: none;
   border: 0.00001px solid #64646452;
-  color: var(--white-100);
+  color: hsla(0, 0%, 40%, 1);
   border-radius: var(--border-radius--default);
-  font-size: 1rem;
+  font-size: 13px;
 }
 
 .new-task__char-count {
   align-self: flex-end;
   font-size: 0.75rem;
   transition: 0.5s ease-in-out;
+  color: hsla(0, 0%, 40%, 1);
 }
 
 .new-task__char-count--exceeded {
@@ -86,15 +93,12 @@
 }
 
 .new-task__select {
-  padding: 18px 12px;
+  padding: 13px 12px;
   background-color: transparent;
   outline: none;
   border: 0.00001px solid #64646452;
-  color: var(--white-100);
+  color: hsla(0, 0%, 40%, 1);
   border-radius: var(--border-radius--default);
-  appearance: none; /* Eliminar el estilo predeterminado */
-  -webkit-appearance: none; /* Eliminar el estilo predeterminado en Safari/Chrome */
-  -moz-appearance: none; /* Eliminar el estilo predeterminado en Firefox */
 }
 
 .new-task__select:focus {
@@ -102,8 +106,7 @@
 }
 
 .new-task__select option {
-  background-color: var(--black-100); /* Color de fondo de las opciones */
-  color: var(--white-100); /* Color del texto de las opciones */
+  color: hsla(0, 0%, 40%, 1);
 }
 
 .new-task__date-group {
@@ -139,12 +142,12 @@
   border: none;
   outline: none;
   padding: 14px 19px;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  color: var(--blue-100);
+  color: white;
   transition: 0.5s ease-in-out;
-  background-image: var(--yellow-gradient);
+  background-color: #171717;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: var(--border-radius--default);
 }
@@ -157,13 +160,13 @@
   border: none;
   outline: none;
   padding: 14px 19px;
-  font-size: 0.875rem;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  color: var(--white-100);
+  color: hsla(0, 0%, 40%, 1);
   transition: 0.5s ease-in-out;
   background-color: transparent;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
   border-radius: var(--border-radius--default);
   border: 0.00001px solid #64646452;
 }
@@ -173,10 +176,9 @@
   flex-direction: column;
   row-gap: 30px;
   padding: 46px 2rem;
-  min-width: 600px;
-  max-height: 600px;
-  background-color: var(--black-100);
-  border: 0.00001px solid #64646452;
+  max-height: 200px;
+
+  border: 1px solid rgb(0 0 0 / 8%);
   border-radius: var(--border-radius--default);
 }
 

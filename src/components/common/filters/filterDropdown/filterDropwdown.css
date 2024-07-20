@@ -1,0 +1,17 @@
+.tasks__filters {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0.3rem 1rem;
+  background-color: #f2f2f2;
+  border-radius: var(--border-radius--default);
+}
+
+.view__toggle__button,
+.user__filter__button {
+  outline: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
