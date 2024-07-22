@@ -38,3 +38,9 @@
   opacity: 1;
   scale: 1;
 }
+
+@media (max-width: 1000px) {
+  .filter_deploy {
+    left: 0;
+  }
+}
