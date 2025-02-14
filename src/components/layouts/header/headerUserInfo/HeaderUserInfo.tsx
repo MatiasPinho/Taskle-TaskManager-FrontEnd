@@ -26,7 +26,7 @@ export const HeaderUserInfo: React.FC = () => {
   return (
     <div className="header__user-info">
       <div className="header__greeting-hour">
-        <span className="header__greeting">Hey Matias Pinho</span>
+        <span className="header__greeting">Hey Luis Torri</span>
         <span className="header__hour">{info}</span>
       </div>
     </div>
